@@ -8,5 +8,10 @@ int main(){
 	s2 = 2*pi*r*h;
 	s = s1*2.0+s2;
 	printf("%.3lf\n", s);
+	double a = sqrt(-10);
+	printf("%d\n", 1.0/0.0);
+	printf("%d\n\n%d\n", 1+2,3+4);
+	printf("%s\n","%d");
+	printf("%s\n", "\\n");
 	return 0;
 }
