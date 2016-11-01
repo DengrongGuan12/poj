@@ -3,6 +3,7 @@
 #define MAXN 10
 int a[MAXN][MAXN];
 int main(){
+  //蛇形填数
   int n,x,y,t;
   scanf("%d", &n);
   memset(a,0,sizeof(a));
