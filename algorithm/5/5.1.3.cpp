@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+// 找周期串
 int main(){
   char word[100];
   scanf("%s",word);
