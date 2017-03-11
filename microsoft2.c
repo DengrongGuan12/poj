@@ -3,6 +3,7 @@
 #include<string.h>
 // 输出字典序（由0和1组成）中的第k个元素
 int K = 1;
+int valid = 0;
 void gen(int n,int m,char* s, int kth){
     if(n == 0){
         char* newStr = (char*)malloc(strlen(s)+m+1);
@@ -13,6 +14,7 @@ void gen(int n,int m,char* s, int kth){
         }
         newStr[i] = '\0';
         if(K == kth){
+            valid = 1;
             printf("%s\n",newStr);
         }
         K++;
@@ -27,6 +29,7 @@ void gen(int n,int m,char* s, int kth){
         }
         newStr[i] = '\0';
         if(K == kth){
+            valid = 1;
             printf("%s\n",newStr);
         }
         K++;
@@ -57,6 +60,10 @@ int main(){
         scanf("%d%d%d",&n,&m,&k);
         char s[]= {'\0'};
         gen(n,m,s,k);
+        if(valid == 0){
+            printf("Impossible\n");
+        }
+        valid = 0;
     }
     return 0;
 }
